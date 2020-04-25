@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+ 一个mapper.xml 代表的就是一个模块
+    namespace:名称空间 (模块的唯一标识)
+		区分模块
+		namespace的值为接口的权限的类名
+	唯一：namespace.id
+	    id: id的值要和方法名保持一致.
+ -->  
+<mapper namespace="com.itheima.dao.UserDao">
+<!-- select 查询 -->   
+	<select id="findAll" resultType="com.itheima.domain.User">
+    select *  from user
+    </select>
+   <!-- <select id="findById" resultType="com.itheima.domain.User">
+        select *  from user where id = 1
+    </select>-->
+</mapper>   
